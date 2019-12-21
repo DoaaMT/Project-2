@@ -34,7 +34,7 @@ By the time you submit this project, you will have covered new ground in, and re
 - Build a web application from scratch, must be your own work.
 - Use Ruby on Rails framework to build your application
 - Don't use Rails Scaffolding for generating your resources.
-- Deploy on Heroku so application is live on the web
+- Deploy on Heroku so application is live on the web [here](https://github.com/sei-jed-10/deployment-in-heroku)
 - Create a `README.md` file that explains your app to the world
 
 ### Technical Requirements
