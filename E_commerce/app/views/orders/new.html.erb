@@ -1,17 +1,22 @@
 <h1>New Order</h1>
+<br>
+
+
+
 
 <%= form_for(@order) do |f| %>
    
     <%= f.hidden_field :product_id, :value => @product.id %>
-      <p> Quantity \ </p>
+      <p> Quantity </p>
       <%= f.select(:quantity, options_for_select(1..@product.stock)) %>
-      <p>
-        <%= f.submit 'Submit' %>
-      </p>   
-      
-     
+      <br>
+      <br>
+      <div class="btn btn-danger"  role="group" aria-label="Basic example">
+        <%=  f.submit 'Submit', :class => "btn btn-danger" %>  |
+        <%= link_to 'Back', orders_path, :class => "btn btn-danger" %> 
+        </div>
+
      
     <% end %>
 
    
-<%= link_to 'Back', orders_path %>

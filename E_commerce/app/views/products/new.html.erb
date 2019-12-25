@@ -1,32 +1,41 @@
+<div class='divfo'>
 <%= form_for(@product) do |f| %>
-    <p>
+  <div class="form-group">
       <%= f.label :name, "Product Name" %>
+  <div class="col-sm-10">
       <%= f.text_field :name %>
-    </p>
-
-    <p>
+    </div></div>
+  <div class="form-group">
     <%= f.label :price, "Price" %>
+  <div class="col-sm-10">
     <%= f.text_field :price %>
-    </p>
+  </div></div>
 
-    <p>
+  <div class="form-group">
     <%= f.label :img, "img" %>
+    <div class="col-sm-10">   
     <%= f.text_field :img %>
-    </p>
+    </div></div>
 
-    <p>
+    <div class="form-group">
     <%= f.label :description, "description" %>
+    <div class="col-sm-10">  
     <%= f.text_field :description %>
-    </p>
+    </div></div>
 
-    <p>
+    <div class="form-group">
     <%= f.label :stock, "stock" %>
+    <div class="col-sm-10">  
     <%= f.text_field :stock %>
-    </p>
+    </div></div>
 
-    <p>
-      <%= f.submit 'Submit' %>
-    </p>   
+  
+    <div class="btn btn-danger"  role="group" aria-label="Basic example">
+    <%= f.submit 'Submit', :class => "btn btn-danger" %>  |
+    <%= link_to 'Back', products_path, :class => "btn btn-danger" %> 
+    </div>
+
   <% end %>
   
-  <%= link_to 'Back', products_path %>
+  
+</div>

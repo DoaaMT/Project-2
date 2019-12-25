@@ -1,16 +1,19 @@
-<h3> product name \ <%= @product.name %></h3>
+<h3 class="show"> product name: </h3> 
+<h3 class="show2"> <%= @product.name %> </h3>
 
-<h4>Price \ <%= @product.price %></h4>
+<h3 class="show">Price: </h3>
+<h3 class="show2"><%= @product.price %> SR</h3>
+
 <h4><%= image_tag(@product.img , size: "300x350", alt: "product Image") %></h4>
-<h4>Description \ <%= @product.description %></h4>
-<h4>Stock \ <%= @product.stock%></h4>
+<h3 class="show">Description: </h3>
+<h3 class="show2"><%= @product.description %></h3>
+<h3 class="show">Stock: </h3>
+<h3 class="show2"><%= @product.stock%></h3>
 
 
 
-
-<td><%=  link_to 'Add to cart', new_order_path(:product_id => @product.id)%></td>
-
-<br>
-<%= link_to 'Back', products_path %>
-
+<div class="btn btn-danger"  role="group" aria-label="Basic example">
+<%= link_to 'Add to cart', new_order_path(:product_id => @product.id) , :class => "btn btn-danger" %>  |
+<%= link_to 'Back', products_path, :class => "btn btn-danger" %> 
+</div>
 
