@@ -1,0 +1,24 @@
+<%= form_for @product do |f| %>
+    <div class="input-field col s6">
+        <%= f.label :name, 'Name'%>
+        <%= f.text_field :name%>
+    </div>
+    <div class="input-field col s6">
+        <%= f.label :price, 'price' %>
+        <%= f.text_field :price %>
+    </div>
+    <div class="input-field col s6">
+        <%= f.label :img, 'img' %>
+        <%= f.text_field :img %>
+    </div>
+    <div class="input-field col s6">
+        <%= f.label :description , 'description' %>
+        <%= f.text_field :description %>
+    </div>
+    <div class="input-field col s6">
+        <%= f.label :stock, 'stock' %>
+        <%= f.text_field :stock %>
+    </div>
+    <%= f.submit "Submit", :class => "btn waves-effect waves-light" %>
+  <% end %>
+ 

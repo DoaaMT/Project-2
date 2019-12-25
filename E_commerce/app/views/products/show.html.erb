@@ -1,0 +1,16 @@
+<h3> product name \ <%= @product.name %></h3>
+
+<h4>Price \ <%= @product.price %></h4>
+<h4><%= image_tag(@product.img , size: "300x350", alt: "product Image") %></h4>
+<h4>Description \ <%= @product.description %></h4>
+<h4>Stock \ <%= @product.stock%></h4>
+
+
+
+
+<td><%=  link_to 'Add to cart', new_order_path(:product_id => @product.id)%></td>
+
+<br>
+<%= link_to 'Back', products_path %>
+
+

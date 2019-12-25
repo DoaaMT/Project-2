@@ -1,0 +1,41 @@
+<h1><%= current_user.email %>'s Products</h1>
+
+
+<table class="striped bordered">
+  <thead>
+    <tr>
+      <th>  Name  </th>
+      <th>  Price  </th>
+      <th>  Img  </th>
+      <th>  Description  </th>
+      <th>  Stock  </th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td></td>
+        <td><%= product.price %></td>
+        <td></td>
+        <td><%= image_tag(product.img , size: "100x100", alt: "product Image") %></td>
+        <td></td>
+        <td><%= product.description %></td>
+        <td></td>
+        <td><%= product.stock %></td>
+        <td></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+   <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New product', new_product_path %> </br>
+<%= link_to 'Back', products_path %>
+
